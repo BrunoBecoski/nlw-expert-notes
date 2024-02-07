@@ -5,7 +5,7 @@ import { NoteCard } from './components/note-card';
 
 export function App() {
   return (
-    <div className="mx-auto  max-w-6xl px-12 my-12 space-y-6">
+    <div className="mx-auto max-w-6xl px-12 my-12 space-y-6">
       <img src={logo} alt="NLW Expert" /> 
 
       <form className="w-full ">
@@ -22,10 +22,19 @@ export function App() {
 
         <NewNoteCard />
 
-        <NoteCard />
-        <NoteCard />
-        <NoteCard />
-        <NoteCard />
+        <NoteCard
+          note={{
+            date: new Date(),
+            content: 'Hello World',
+          }}
+        />
+
+        <NoteCard
+          note={{
+            date: new Date(),
+            content: 'Hello World',
+          }}
+        />
       </div>
     </div>
   )
